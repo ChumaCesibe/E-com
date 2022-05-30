@@ -1,0 +1,19 @@
+
+<div class="cards container">
+    <div class="row">
+      <div class="col 12">
+    <div class="card-wrapper">
+      <div class="card" style="width: 18rem;" *ngFor="let product of products; let i = index" >
+        <!--<app-add-product class="passing-data"></app-add-product>-->
+        <img [src]="product.image" class="card-img-top" [alt]="product.title" routerLink="/product/{{product.id}}">
+        <div class="buttons">
+            <button class="btn btn-secondary" (click)="addToCart(i)"><i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+  
+
+
