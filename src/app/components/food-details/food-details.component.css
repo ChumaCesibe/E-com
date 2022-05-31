@@ -1,0 +1,16 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 40%;
+    height: 20%;
+    transform-origin: 50% 65%;
+    transition: transform 5s, filter 3s ease-in-out;
+    
+}
+
+img:hover{
+    filter: brightness(100%);
+    transform: scale(1.5);
+}

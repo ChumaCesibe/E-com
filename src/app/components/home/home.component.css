@@ -15,7 +15,12 @@
 img{
     max-width: 1200px;
     height:800px
+    
  
+}
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 h3{

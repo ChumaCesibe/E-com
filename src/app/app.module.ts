@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AddProductsComponent } from './cart/add-products/add-products.component';
+import { FoodDetailsComponent } from './components/food-details/food-details.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AddProductsComponent } from './cart/add-products/add-products.component
     HomeComponent,
     FooterComponent,
     MenuComponent,
-    AddProductsComponent
+    AddProductsComponent,
+    FoodDetailsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

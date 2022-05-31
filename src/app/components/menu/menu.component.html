@@ -1,19 +1,25 @@
-
-<div class="cards container">
+<h3 style="text-align:center;white-space:pre-wrap;">MENU</h3>
+<section class="mt-3">
+<div class="container">
     <div class="row">
-      <div class="col 12">
+      <div class="col">
     <div class="card-wrapper">
       <div class="card" style="width: 18rem;" *ngFor="let product of products; let i = index" >
+        
         <!--<app-add-product class="passing-data"></app-add-product>-->
         <img [src]="product.image" class="card-img-top" [alt]="product.title" routerLink="/product/{{product.id}}">
-        <div class="buttons">
-            <button class="btn btn-secondary" (click)="addToCart(i)"><i class="fa fa-shopping-cart"></i></button>
+        <div class="centered"><strong>Click me</strong> </div>
+        <div class="button1">
+            <button class="btn btn">View more</button>
+            <div class="button2">
+            <button class="btn btn" (click)="addToCart">add to cart</button>
+          </div>
             </div>
           </div>
         </div>
         </div>
         </div>
       </div>
-  
+    </section>
 
 

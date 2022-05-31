@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FoodDetailsComponent } from './components/food-details/food-details.component';
+import { FormComponent } from './components/form/form.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProductService } from './product.service';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'menu', component:MenuComponent},
+  {path: 'product/:id', component:FoodDetailsComponent},
+  {path:'form', component:FormComponent},
 ];
 
 @NgModule({
