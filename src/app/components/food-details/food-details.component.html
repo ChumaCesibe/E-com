@@ -1,15 +1,37 @@
 <div class="container">
   
-<img [src]="product.image" class="card-img-top" [alt]="product.title"  class="center">
-<div class="centered"></div>
-    <h2>{{product.name}}-<span></span>R{{product.price}}</h2> 
-    <h5>{{product.title}}</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <app-add-product class="passing-data"></app-add-product>
+        <img [src]="product.image" class="card-img-top" alt="...">
+      </div>
+    
+      <div class="col order-1">
   
-    <div>
-      <label for="product-name"> </label>
+      <h5 class="card-title"><strong>{{product.name}}<span></span>-R{{product.price}}</strong></h5>
+      <p class="card-text">{{product.title}}</p>
+      <h5><strong>Ingredients</strong></h5>
+      <p class="card-text">{{product.ingredients}}</p>
+      <h5><strong>Allergens</strong></h5>
+      <p class="card-text">{{product.allergens}}</p>
+
+
+     <p></p>
+
       
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a href="menu" class="btn">back</a>
+          </div>
+        
+          <div class="col order-1">
+            <a href="" class="btn">add to cart</a>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
-   
   </div>
-
-
+  </div>

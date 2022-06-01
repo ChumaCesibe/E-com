@@ -5,5 +5,7 @@ export interface Product {
     name:String
     image: string,
     catergory?: [],
-    quantity?: number
+    quantity?: number,
+    ingredients:string,
+    allergens:string,
   }
