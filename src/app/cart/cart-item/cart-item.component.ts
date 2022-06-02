@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCTS } from 'src/app/mock_product';
-import { ProductService } from 'src/app/product.service';
 import { Product } from 'src/app/products';
 
 
@@ -20,9 +18,7 @@ export class CartItemComponent implements OnInit {
   value: number = 1
   constructor( private router: Router) { }
 
-  ngOnInit(): void {
-    console.log("Hello world")
-  }
+  ngOnInit(): void {}
 
   editCart(index: number){
     let found = this.cart.find((elem: any) => elem.id == this.cart[index].id)

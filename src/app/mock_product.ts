@@ -1,4 +1,4 @@
-import { Product } from "./products"
+import { Product } from "./products";
 export const PRODUCTS: Product[] = [
    {
       id:1,

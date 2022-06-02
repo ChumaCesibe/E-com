@@ -1,3 +1,5 @@
+
+
 .text{
     font-family: Della Respira;
     font-weight: 400;
@@ -9,18 +11,6 @@
     text-transform: none;
     color: black;
     text-align:center;white-space:pre-wrap;
-}
-
-
-img{
-    max-width: 1200px;
-    height:800px
-    
- 
-}
-img:hover {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 h3{
@@ -56,17 +46,8 @@ h3{
     font-weight:bold;
     font-style: italic;
 }
-.foodbox 
-{
-    padding: 10px 5px;
-} 
-.foodbox img
-{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-}
+
+
 .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -77,3 +58,4 @@ h3{
 .card:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+

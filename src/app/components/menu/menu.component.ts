@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PRODUCTS } from 'src/app/mock_product';
-
-
-
-
+import { Product } from 'src/app/products';
 
 @Component({
   selector: 'app-menu',
@@ -15,17 +12,17 @@ export class MenuComponent implements OnInit {
 
   products = PRODUCTS
 
-  cart: any = []
+  cart: any[] = []
   value = 1
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addToCart(i: number){
+  addToCart(index: number){
     let data = {
       quantity: this.value,
-      ...this.products[i]
+      ...this.products[index]
     } 
     
   this.cart.push(data)

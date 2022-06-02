@@ -1,21 +1,16 @@
-
-  img{
+img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
     width: 400px;
     height: 400px;
-    transform-origin: 50% 65%;
-    transition: transform 5s, filter 3s ease-in-out;
+    border: 1PX solid white;
+    border-radius:10px;
+    box-shadow: 10px 15px 10px black;
     
 }
 
-
-img:hover{
-    filter: brightness(100%);
-    transform: scale(1.5);
-}
 
 .card-title{
     text-align: center;
@@ -23,8 +18,18 @@ img:hover{
 
 .btn{
     color: var(--primary-color);
-}
 
+}
+.col i{
+    width: 10px;
+    height: 100px;
+    
+}
 h5{
     text-align: center;
+}
+
+.details{
+    border: 1px solid black;
+    border-radius: 10px;
 }
