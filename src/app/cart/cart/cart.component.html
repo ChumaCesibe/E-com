@@ -2,11 +2,12 @@
     <div class="container">
         <main id="cart" style="max-width:960px">
             <h1 *ngIf="cart.length">Your Cart</h1>
+
             <div class="container-fluid">
               <div class="row align-items-start" *ngIf="cart.length; else elseBlock">
                 <div class="col-12 col-sm-8 items" *ngFor="let cart1 of cart; let i = index">
                   <!--1-->
-                  <app-cart-item [product]="cart1" [i]="i" [cart]="cart" [method]="totalCost"></app-cart-item>
+                  <app-cart-item [product]="cart1" [i]="i" [method]="totalCost"></app-cart-item>
                   
                 </div>
                 <div class="col-12 col-sm-4 p-3 proceed form">
@@ -35,7 +36,7 @@
                       <p id="total">{{total * 1.014 | currency: 'ZAR'}}  </p>
                     </div>
                   </div>
-                  <button id="btn-checkout" class="shopnow" ()="checkout()">Checkout</button>
+                  <button id="btn-checkout" class="shopnow" routerLink="/form">Checkout</button>
                 </div>
               </div>
               <div class="row align-items-start">
@@ -50,3 +51,5 @@
           </main>
     </div>
 </section>
+
+

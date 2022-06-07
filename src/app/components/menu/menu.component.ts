@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
 
   cart: any[] = []
   value = 1
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,7 +29,9 @@ export class MenuComponent implements OnInit {
   this.cart.push(data)
     console.log(this.cart)
     localStorage.setItem('cart', JSON.stringify(this.cart))
+    {
+      
+    }
     
   }
-  
 }

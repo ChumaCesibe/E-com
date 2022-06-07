@@ -10,15 +10,14 @@ import { Location } from '@angular/common';
 })
 export class CartComponent implements OnInit {
 
-  cart: any 
+  cart: any // JSON.parse(`${localStorage.getItem('cart')}`) ? JSON.parse(`${localStorage.getItem('cart')}`) : []
   
   total: number = 0
   
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
     this.getCart()
-    
     console.log(this.cart)
   }
 
@@ -36,6 +35,9 @@ export class CartComponent implements OnInit {
     })
   }
 
+  checkout(){
+    console.log('We are here now')
+  }
 
 
 }
