@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,7 @@ import { CartComponent } from './cart/cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './cart/add-product/add-product.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { AddProductComponent } from './cart/add-product/add-product.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

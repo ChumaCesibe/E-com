@@ -1,12 +1,11 @@
 <div class="container">
-    <form  action="https://formspree.io/f/mlezzbjq"
-    method="POST">
+  <form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-25">
       <label for="fname">First Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input matInput [formControl]="name" required>
     </div>
   </div>
   <div class="row">
@@ -14,7 +13,7 @@
       <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input span [formControl]="lastname" required>
     </div>
   </div>
   <div class="row">
@@ -22,7 +21,8 @@
       <label for="email">e-mail</label>
     </div>
     <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="Your e-mail...">
+      <input [formControl]="email" placeholder="email@example.com" required>
+      <div><small *ngIf="email.invalid && email.touched" class="text-danger">Please enter a valid email</small></div>
     </div>
   </div>
 
@@ -31,12 +31,16 @@
       <label for="subject">Delivery Address</label>
     </div>
     <div class="col-75">
-      <textarea id="address" name="address" placeholder="Write your address.." style="height:100px"></textarea>
+      <textarea span [formControl]="address" maxlength="256" placeholder="1052 Adderlly Road" required></textarea>
+      <div> {{address.value?.length || 0}}/256</div>
+		<span *ngIf="address.invalid && address.touched" class="text-danger">Please enter delivery address</span>
     </div>
   </div>
   <br>
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
+  <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+	
+	<div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+		<span>{{responseMessage}}</span>
+	</div>
   </form>
 </div>
