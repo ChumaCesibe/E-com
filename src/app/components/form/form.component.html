@@ -1,4 +1,5 @@
 <div class="container">
+  <h1>Delivery address</h1>
   <form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-25">
@@ -37,7 +38,7 @@
     </div>
   </div>
   <br>
-  <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+  <button [disabled]="isLoading" class="btn btn-sucess" type="submit">Submit</button>
 	
 	<div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
 		<span>{{responseMessage}}</span>
